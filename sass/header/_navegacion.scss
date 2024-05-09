@@ -1,0 +1,22 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.barra{
+    border-top: solid 1px v.$borde;
+
+    .barra__nav{
+        display: flex;
+        justify-content: space-around;
+
+        .nav__link{
+            color: v.$negro;
+            padding: 10px;
+            font-size: 18px;
+
+            @include m.telefono{
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros{
+
+    h2{
+        padding: 30px 0;
+    }
+
+    .nosotros__grid{
+        @include m.grid(20px, 2,1);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nosotros__info{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            p{
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

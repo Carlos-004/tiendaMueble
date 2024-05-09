@@ -1,0 +1,27 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.galeria{
+    h2{
+        padding: 30px 0;
+    }
+
+    .galeria__container{
+        @include m.grid(20px,3,1fr);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        figure{
+
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 300px;
+            }
+        }
+    }
+}

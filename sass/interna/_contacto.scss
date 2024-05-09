@@ -1,0 +1,62 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.contacto{
+    h2{
+        padding: 30px 0;
+    }
+
+    .formulario{
+        width: min(600px ,100%);
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        fieldset{
+            padding: 20px;
+
+            legend{
+                text-align: center;
+                text-transform: uppercase;
+                background-color: v.$azul;
+                color: v.$blanco;
+                padding: 15px;
+                width: 95%;
+                font-size: 20px;
+                font-weight: 900;
+            }
+
+            .campo{
+                label{
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                .input__style{
+                    padding: 15px;
+                    border: solid 1px v.$borde;
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+                .radio{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .btn{
+        background-color: v.$verde;
+        color: v.$blanco;
+        padding: 15px;
+        margin-top: 10px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+
+        @include m.telefono{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use "../base/variables" as v;
+
+.header{
+    padding: 30px 0;
+    .header__title{
+
+        span{
+            color: v.$azul;
+        }
+    }
+}

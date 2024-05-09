@@ -1,0 +1,43 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.sobre{
+    margin-top: 40px;
+
+    .sobre__grid{
+        @include m.tablet{
+            @include m.grid(0,2,1fr);
+        }
+
+        .sobre__hero{
+            background-image: url("../../img/nosotros.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+        }
+        .sobre__container{
+            background-color: v.$azul;
+
+            .sobre__info{
+                padding: 50px;
+                @include m.desktop{
+                    padding: 100px;
+                }
+                @include m.telefono{
+                    padding: 20px;
+                }
+
+                h2{
+                    color: v.$blanco;
+                    margin-bottom: 20px;
+                }
+                p{
+                    color: v.$blanco;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

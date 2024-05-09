@@ -1,0 +1,43 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.productos{
+    
+    .blog__fecha{
+        padding: 10px;
+        .blog__texto{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .fecha{
+                font-size: 16px;
+                font-weight: bold;
+    
+                @include m.telefono{
+                    font-size: 14px;
+                }
+    
+                span{
+                    color: v.$azul;
+                    font-size: 16px;
+                    font-weight: normal;
+    
+                    @include m.telefono{
+                        font-size: 12px;
+                    }
+                }
+    
+            }
+        }
+
+
+       
+
+        .parrafo{
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+    }
+}
